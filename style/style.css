@@ -1,0 +1,91 @@
+:root{
+    --c-main: #333;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+.container {
+    width: 80%;
+    height: 300px;
+}
+
+.star {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #333;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star .line,
+.star .line_2 {
+    position: absolute;
+    display: inline-block;
+    background-color: #ccc;
+    border-radius: 5px;
+    animation: 
+        crecer 2s 1 ease-in-out,
+        parpadear 1.5s infinite 1.5s ease-in-out;
+}
+
+.line::before,
+.line_2::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: inherit;
+}
+
+.star .line{
+    width: 80%;
+    height: 4px;
+}
+
+.star .line::before {
+    transform: rotate(90deg);
+}
+
+.star .line_2 {
+    width: 60%;
+    height: 3px;
+    transform: rotate(-45deg);
+}
+
+.star .line_2::before {
+    transform: rotate(90deg);
+}
+
+@keyframes crecer {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        
+    }
+}
+
+@keyframes parpadear {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

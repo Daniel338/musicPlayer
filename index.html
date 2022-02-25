@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Music Player</title>
+	<link rel="stylesheet" href="./style/style.css">
+	<script src="./script/main.js" defer></script>
 </head>
 <body>
 	<header>
@@ -10,13 +12,18 @@
 	</header>
 	<main>
 		<section class="container">
-			<video width="720" height="400" controls>
-				<source src="video/trailer.mp4" type="video/mp4">
-				<source src="video/trailer.ogg">
-				<track src="text_track/pastLives.vtt" kind="subtitles" srclang="es" default label="español">
-			</video>
+			<div class="star">
+				<span class="line"></span>
+				<span class="line_2"></span>
+			</div>
+			<audio id="audio" src="./music/pastLives.mp3"></audio>
 			<h2 class="container__subtitle"></h2>
 			<h3 class="container__title_track"></h3>
+			<div class="controls">
+				<button id="previous"> Previous</button>
+				<button id="play"> Play</button>
+				<button id="next">Next</button>
+			</div>
 		</section>
 	</main>
 </body>
