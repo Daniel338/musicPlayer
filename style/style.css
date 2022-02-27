@@ -17,8 +17,8 @@
 
 .star {
     position: relative;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     background: #333;
 
     display: flex;
@@ -49,7 +49,7 @@
 
 .star .line{
     width: 80%;
-    height: 4px;
+    height: 2px;
 }
 
 .star .line::before {
@@ -58,7 +58,7 @@
 
 .star .line_2 {
     width: 60%;
-    height: 3px;
+    height: 2px;
     transform: rotate(-45deg);
 }
 
